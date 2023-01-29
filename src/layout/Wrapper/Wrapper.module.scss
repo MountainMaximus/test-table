@@ -1,0 +1,32 @@
+@import "../../scss/var.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  .main {
+    padding: $header-height 0 0 $sidebar-width;
+    @include breakpoint($tablet-bp) {
+      padding-left: 0;
+    }
+    .content {
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+  }
+  .mask {
+    display: none;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1998;
+    height: 100%;
+    @include breakpoint($tablet-bp) {
+      display: block;
+    }
+  }
+}

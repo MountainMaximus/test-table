@@ -1,0 +1,44 @@
+@import "../../scss/var.scss";
+
+.table {
+  width: 100%;
+  overflow: hidden;
+  border-spacing: 0;
+  text-align: center;
+  margin: auto;
+
+  th {
+    background-color: $lighten;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    border: 1px solid $lighten;
+    position: relative;
+    height: 40px;
+    &:first-child {
+      border-right: 1px solid white;
+    }
+    &:last-child {
+      border-left: 1px solid white;
+    }
+    div {
+      display: none;
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      height: 100%;
+      background-color: $lighten;
+      color: white;
+      padding: 5px;
+      border: 1px solid white;
+    }
+    &.fixed {
+      div {
+        display: block;
+      }
+    }
+  }
+  td {
+    border: 1px solid $primery;
+  }
+}

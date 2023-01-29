@@ -1,0 +1,18 @@
+$sidebar-width: 350px;
+$header-height: 60px;
+
+$tablet-bp: 991px;
+$mobile-bp: 575px;
+
+$primery: #373748;
+$background: #b4abab;
+$lighten: darken(#9194a0, 15);
+
+@mixin breakpoint($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+@include breakpoint($tablet-bp) {
+}
